@@ -163,7 +163,7 @@ internal class CropOverlay: UIView {
 		return button
 	}
 	
-	func moveCropOverlay(gestureRecognizer: UIPanGestureRecognizer) {
+    @objc func moveCropOverlay(gestureRecognizer: UIPanGestureRecognizer) {
 		if resizingMode != .none, let button = gestureRecognizer.view as? UIButton {
 			if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
                 let translation = gestureRecognizer.translation(in: self)
